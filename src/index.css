@@ -1,0 +1,119 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: auto;
+  max-width: 38rem;
+  padding: 2rem;
+}
+
+#menu {
+	background: #0099CC;
+	background: linear-gradient(158deg,  #FF6E7F,  #BFE9FF);
+	color: #FFF;
+	height: 35px;
+	padding-left: 18px;
+	border-radius: 50px;
+}
+#menu ul, #menu li {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none
+}
+#menu ul {
+	width: 100%;
+}
+#menu li {
+	float: left;
+	display: inline;
+	position: relative;
+}
+#menu a {
+	display: block;
+	line-height: 35px;
+	padding: 0 14px;
+	text-decoration: none;
+	color: #EDEDED;
+	font-size: 21px;
+	text-transform: capitalize;
+}
+#menu a.dropdown-arrow:after {
+	content: "\002B";
+	margin-left: 5px;
+}
+#menu li a:hover {
+	color: #CC8100;
+	background: #F2D396;
+}
+#menu input {
+	display: none;
+	margin: 0;
+	padding: 0;
+	height: 35px;
+	width: 100%;
+	opacity: 0;
+	cursor: pointer
+}
+#menu label {
+	display: none;
+	line-height: 35px;
+	text-align: center;
+	position: absolute;
+	left: 35px
+}
+#menu label:before {
+	font-size: 1.6em;
+	content: "\2261"; 
+	margin-left: 20px;
+}
+#menu ul.sub-menus{
+	height: auto;
+	overflow: hidden;
+	width: 170px;
+	background: #444444;
+	position: absolute;
+	z-index: 99;
+	display: none;
+}
+#menu ul.sub-menus li {
+	display: block;
+	width: 100%;
+}
+#menu ul.sub-menus a {
+	color: #FFFFFF;
+	font-size: 16px;
+}
+#menu li:hover ul.sub-menus {
+	display: block
+}
+#menu ul.sub-menus a:hover{
+	background: #F2F2F2;
+	color: #444444;
+}
+@media screen and (max-width: 800px){
+	#menu {position:relative}
+	#menu ul {background:#111;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none}
+	#menu ul.sub-menus {width:100%;position:static;}
+	#menu ul.sub-menus a {padding-left:30px;}
+	#menu li {display:block;float:none;width:auto;}
+	#menu input, #menu label {position:absolute;top:0;left:0;display:block}
+	#menu input {z-index:4}
+	#menu input:checked + label {color:white}
+	#menu input:checked + label:before {content:"\00d7"}
+	#menu input:checked ~ ul {display:block}
+}
+
+
+.css-input {
+  padding: 15px;
+  font-size: 16px;
+  border-width: 0px;
+  border-color: #CCCCCC;
+  background-color: #ffffff;
+  color: #000000;
+  border-style: solid;
+  border-radius: 11px;
+  box-shadow: 0px 0px 30px rgba(66,66,66,.75);
+  text-shadow: 0px 0px 16px rgba(66,66,66,.75);
+}
+.css-input:focus {
+  outline:none;
+}
